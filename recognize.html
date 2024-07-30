@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Recognize | MediSign</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js" defer></script>
+
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/4003/4003833.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="loader-wrapper">
+    <img class="loader" src="loader1.gif">
+  </div>
+
+  <nav id="menu">
+    <div class="logo">
+      <img class="avatar_me" src="logo.png">
+      <a class="michelle" href="index.html">MediSign</a>
+    </div>
+    <div class="navbar-links" id="navigation">
+      <a class="navbar-a current" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a class="navbar-a current" href="learn.html"><i class="fas fa-book"></i> Learn</a>
+      <a class="navbar-a current" href="recognize.html"><i class="far fa-eye"></i> Recognize</a>
+      <a class="navbar-a current" href="resources.html"><i class="far fa-folder"></i> Resources</a>
+      <a class="navbar-a current" href="profile.html"><i class="far fa-user"></i> Profile</a>
+    </div>
+    <div class="menu-btn" id="menu-btn">
+      <div class="menu-btn__burger"></div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Recognize</h1>
+  </div>
+  <div class="container2">
+    <p data-short="Explore our Teachable Machine models powered by machine learning to recognize and translate ASL gestures in real-time!"> Explore our Teachable Machine models powered by machine learning to recognize and translate American Sign Language (ASL) gestures in real-time. This tool helps bridge communication gaps, ensuring equitable and effective care in medical settings. Just click "Start" to test it out! </p>
+  </div>
+  
+  <div class="flex-container">
+    <!-- Medical Personnel Section -->
+    <div class="category-box" id="medical-personnel-box">
+      <h2>Medical Personnel</h2>
+      <p>Recognize various medical personnel such as doctors, nurses, and more.</p>
+      <button class="start-button" type="button" onclick="init('medical_personnel')"><i class="fas fa-play"></i> Start</button>
+      <div id="webcam-container-medical-personnel" class="webcam-container"></div>
+      <div id="most-likely-medical-personnel" class="most-likely"></div>
+      <div id="label-container-medical-personnel" class="label-container"></div>
+      <button id="collapse-button-medical-personnel" class="collapse-button" type="button" onclick="collapse('medical_personnel')"><i class="fa-solid fa-caret-up"></i> Collapse</button>
+    </div>
+    
+    <!-- Medical Locations Section -->
+    <div class="category-box" id="medical-locations-box">
+      <h2>Medical Locations</h2>
+      <p>Recognize various medical locations such as hospitals, clinics, and more.</p>
+      <button class="start-button" type="button" onclick="init('medical_locations')"><i class="fas fa-play"></i> Start</button>
+      <div id="webcam-container-medical-locations" class="webcam-container"></div>
+      <div id="most-likely-medical-locations" class="most-likely"></div>
+      <div id="label-container-medical-locations" class="label-container"></div>
+      <button id="collapse-button-medical-locations" class="collapse-button" type="button" onclick="collapse('medical_locations')"><i class="fa-solid fa-caret-up"></i> Collapse</button>
+    </div>
+  </div>
+
+  <!-- Patient Feelings -->
+  <div class="category-box" id="patient-feelings-box">
+    <h2>Patient Feelings</h2>
+    <p>Recognize various feelings such as nauseous, weak, better, tired, and confused.</p>
+    <button class="start-button" type="button" onclick="init('patient_feelings')"><i class="fas fa-play"></i> Start</button>
+    <div id="webcam-container-patient-feelings" class="webcam-container"></div>
+    <div id="most-likely-patient-feelings" class="most-likely"></div>
+    <div id="label-container-patient-feelings" class="label-container"></div>
+    <button id="collapse-button-patient-feelings" class="collapse-button" type="button" onclick="collapse('patient_feelings')"><i class="fa-solid fa-caret-up"></i> Collapse</button>
+  </div>
+  </div>
+
+  <div class="footer" style="padding-top: 20px;">
+      <p>This page was made with
+        <i class="fab fa-html5" style="color: #e34c26;"></i> HTML,
+        <i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS,
+        <i class="fab fa-js-square" style="color: #f7df1e;"></i> JavaScript, and
+        <i class="fas fa-robot" style="color: #005f99;"></i> Teachable Machine.
+      </p>
+      <p>Made with <i class="fas fa-heart" style="color: red;"></i> by Michelle
+      </p>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+</body>
+
+</html>

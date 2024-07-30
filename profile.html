@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Profile - MediSign</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/4003/4003833.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="loader-wrapper">
+    <img class="loader" src="loader1.gif">
+  </div>
+
+  <nav id="menu">
+    <div class="logo">
+      <img class="avatar_me" src="logo.png">
+      <a class="michelle" href="index.html">MediSign</a>
+    </div>
+    <div class="navbar-links" id="navigation">
+      <a class="navbar-a current " href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a class="navbar-a current" href="learn.html"><i class="fas fa-book"></i> Learn</a>
+      <a class="navbar-a current" href="recognize.html"><i class="far fa-eye"></i> Recognize</a>
+      <a class="navbar-a current" href="resources.html"><i class="far fa-folder"></i> Resources</a>
+      <a class="navbar-a current" href="profile.html"><i class="far fa-user"></i> Profile</a>
+    </div>
+    <div class="menu-btn" id="menu-btn">
+      <div class="menu-btn__burger"></div>
+    </div>
+  </nav>
+
+  <div class="profile-container">
+    <div class="profile-header">
+      <div class="profile-pic">
+        <img src="avatar.png" alt="Profile Picture">
+        <br>
+        <button class="upload-btn">Upload</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+    <div class="profile-details">
+      <div class="profile-row">
+        <div class="profile-column">
+           <label for="language">Name</label>
+           <input type="text" id="name" name="name" style="width: 93%;">
+        </div>
+        <div class="profile-column">
+          <label for="language">Language</label>
+          <select id="language">
+            <option value="english">English</option>
+            <option value="asl">Spanish</option>
+            <option value="asl">French</option>
+            <option value="asl">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-column">
+          <label for="date-format">Date Format</label>
+          <select id="date-format">
+            <option value="dd/mm/yyyy">DD/MM/YYYY</option>
+            <option value="dd/mm/yyyy">Other</option>
+          </select>
+        </div>
+        <div class="profile-column">
+          <label for="time-format">Time Format</label>
+          <select id="time-format">
+            <option value="12h">12h</option>
+            <option value="24h">24h</option>
+          </select>
+        </div>
+      </div>
+      <div class="profile-row">
+        <div class="profile-column">
+          <label for="time-zone">Time Zone</label>
+          <select id="time-zone">
+            <option value="eastern-us-canada">Eastern - US & Canada</option>
+            <option value="eastern-us-canada">Other</option>
+          </select>
+        </div>
+        <div class="profile-column">
+          <label for="country">Country</label>
+          <select id="country">
+            <option value="us">United States</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="profile-actions">
+        <button class="save-btn">Save Changes</button>
+        <button class="cancel-btn">Cancel</button>
+        <button class="delete-btn">Delete Account</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+
+  <div class="footer">
+    <p>This page was made with
+      <i class="fab fa-html5" style="color: #e34c26;"></i> HTML,
+      <i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS, and
+      <i class="fab fa-js-square" style="color: #f7df1e;"></i> JavaScript
+    </p>
+    <p>Made with <i class="fas fa-heart" style="color: red;"></i> by Michelle
+    </p>
+  </div>
+
+</body>
+</html>
