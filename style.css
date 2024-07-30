@@ -9,7 +9,7 @@ html, body {
   background-color: white;
 }
 
-/* LOADER CSS */
+
 /* LOADER */
 .loader-wrapper{
   background-color: white;
@@ -30,6 +30,8 @@ html, body {
   position: relative;
   animation: loader 4s infinite ease;
 }
+
+/* MOBILE RESPONSIVE */
 
 @media (max-width: 1000px){
   .loader{
@@ -52,7 +54,7 @@ html, body {
   }
 } */
 
-/* Navigation */
+/* NAVIGATION */
 nav {
   width: calc(100% - 40px); 
   margin: 0 20px;
@@ -104,6 +106,7 @@ nav {
   color: black;
 }
 
+/* BURGER MENU */
 .menu-btn {
   display: none;
   flex-direction: column;
@@ -157,7 +160,7 @@ nav {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
-/* Container */
+/* CONTAINER */
 .container {
   display: flex;
   justify-content: space-between;
@@ -170,6 +173,7 @@ nav {
   max-width: 600px;
 }
 
+/* SPECIAL FONT STYLES */
 .he{
   font-weight: 800;
   font-size: 17px;
@@ -211,6 +215,7 @@ nav {
   margin-left: -3px;
 }
 
+/* HERO START IMAGE */
 .profile-img {
   text-align: center;
 }
@@ -227,6 +232,7 @@ nav {
   box-shadow: 5px 5px 30px 5px #ffd4c2;
 }
 
+/* START BUTTON */
 .start button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -265,6 +271,7 @@ nav {
   transition: 0.3s;
 }
 
+/* START FONT STYLING */
 .start h1{
   font-size: 35px;
   font-weight: 600;
@@ -290,17 +297,8 @@ h3 {
   font-weight: 500;
 }
 
-.footnote {
-  margin-top: 20px;
-}
 
-.social-icon {
-  width: 30px;
-  margin: 0 10px;
-}
-
-
-/* Mobile Responsive */
+/* MOBILE RESPONSIVE (CONTD) */
 @media (max-width: 900px) {
   .navbar-links {
     display: none;
@@ -342,8 +340,6 @@ h3 {
 }
 
 /* PROFILE PAGE */
-
-
 .profile-container {
   width: 80%;
   max-width: 900px;
@@ -399,7 +395,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  padding: 10px 0; /* Add padding between fields */
+  padding: 10px 0; 
 }
 
 .profile-column {
@@ -409,6 +405,22 @@ h3 {
 
 .profile-column:last-child {
   margin-right: 0;
+}
+
+#name {
+  width: 93.5%;
+}
+
+@media (max-width: 800px){
+  #name{
+    width: 91%;
+  }
+}
+
+@media (max-width: 600px){
+  #name{
+    width: 85%;
+  }
 }
 
 .profile-column label {
@@ -436,11 +448,7 @@ h3 {
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-position-y: 50%;
-  padding-right: 30px; /* Adjust padding for larger arrow */
-}
-
-.profile-column textarea {
-  resize: vertical;
+  padding-right: 30px; 
 }
 
 .profile-actions {
@@ -468,7 +476,8 @@ h3 {
 .cancel-btn {
   background-color: #6c757d;
   color: #fff;
-  margin-left: 10px; /* Ensure there's space between save and cancel buttons */
+  margin-left: 10px; 
+  margin-right: 10px;
 }
 
 .delete-btn {
@@ -478,7 +487,6 @@ h3 {
 }
 
 /* RECOGNIZE */
-
 .category-box {
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -506,7 +514,7 @@ h3 {
   border-radius: 5px;
   cursor: pointer;
   margin: 20px 0;
-  display: inline-block; /* Ensure buttons are inline */
+  display: inline-block; 
   font-family: Poppins;
 }
 
@@ -516,7 +524,7 @@ h3 {
 }
 
 .collapse-button {
-  display: none; /* Hide collapse button by default */
+  display: none; 
 }
 
 .webcam-container {
@@ -660,7 +668,7 @@ h3 {
     cursor: pointer;
     margin: 10px auto;
     display: block;
-    width: fit-content; /* Ensures the button width adjusts to the content */
+    width: fit-content;
   }
 
   .learning-module .button-container {
@@ -679,7 +687,7 @@ h3 {
     color: white;
   }
 
-/* ABOUT SECTION */
+/* ABOUT SECTION (INDEX) */
 .about-section {
   padding: 1.5% 5%;
   max-width: 100%;
@@ -698,6 +706,10 @@ h3 {
 .about-section p,
 .about-section ul {
   margin-bottom: 20px;
+}
+
+.about-section p{
+  line-height: 1.8;
 }
 
 .about-section ul {
@@ -851,7 +863,6 @@ h3 {
 }
 
 /* RESOURCES SECTION */
-
 .resources-list {
   list-style-type: none; 
   padding: 0;

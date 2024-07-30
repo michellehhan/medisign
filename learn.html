@@ -19,11 +19,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
 </head>
 
+  <!-- LOADER -->
 <body>
   <div class="loader-wrapper">
     <img class="loader" src="loader1.gif">
   </div>
 
+  <!-- NAVBAR -->
   <nav id="menu">
     <div class="logo">
       <img class="avatar_me" src="logo.png">
@@ -41,9 +43,11 @@
     </div>
   </nav>
 
+  <!-- CONTENT -->
   <div class="container">
     <h1>Learn Medical Signs</h1>
   </div>
+  <!-- DESCRIPTION -->
   <div class="container2">
     <p>Enhance your understanding of American Sign Language (ASL) with our interactive lessons and quizzes. More modules to come soon! </p>
   </div>
@@ -52,6 +56,7 @@
     <h2 style="padding-bottom: 2%;"><span class="highlight">Module 1: Basic Medical Signs</span></h2>
   </div>
 
+  <!-- MODULE 1 -->
   <div class="container2">
     <iframe
       src="https://iframe.embednpages.com/xnkpOGSuIWTgXglL4txQ"
@@ -62,16 +67,18 @@
 
   </div>
 
+  <!-- QUIZ w/ REACT -->
   <div class='container4'>
     <h2> QUIZ </h2>
     <p> Try this quiz to test your knowledge! </p>
   </div>
 
   <div class="container3" style="padding-top: 20px;">
-    <!-- Placeholder for React component -->
+
     <div id="react-learning-module"></div>
   </div>
-  
+
+  <!-- FOOTER -->
   <div class="footer">
     <p>This page was made with
       <i class="fab fa-html5" style="color: #e34c26;"></i> HTML,
@@ -83,6 +90,7 @@
     </p>
   </div>
 
+  <!-- LEARNING MODULE -->
   <script type="text/babel">
     function LearningModule() {
       const [step, setStep] = React.useState(0);
@@ -134,9 +142,9 @@
           title: 'Aspirin',
           quiz: {
             question: 'How do you indicate taking an aspirin?',
-            options: ['Pointing to the head', 'Forming an A handshape and mimicking taking a pill', 'Shaking head'],
-            answer: 'Forming an A handshape and mimicking taking a pill'
-          }
+            options: ['Pointing to the head while rubbing stomach', 'Forming an A handshape and mimicking taking a pill', 'Signing a pill bottle and mimicking taking a pill'],
+            answer: 'Forming an A handshape and mimicking taking a pill'}
+          
         },
       ];
 
@@ -168,7 +176,7 @@
                 key={option} 
                 onClick={() => handleAnswerSelection(option)} 
                 className={`option-button ${selectedAnswer === option ? 'selected' : ''}`}
-                style={{ display: 'block', margin: '10px auto', padding: '10px', width: '100%', maxWidth: '300px', background: selectedAnswer === option ? '#7ec1e2' : '#fff', color: selectedAnswer === option ? '#fff' : '#000', borderRadius: '10px', border: '2px solid #fff', cursor: 'pointer', textAlign: 'center' }}
+                style={{ display: 'block', margin: '12px auto', padding: '15px', width: '100%', maxWidth: '300px', background: selectedAnswer === option ? '#7ec1e2' : '#fff', color: selectedAnswer === option ? '#fff' : '#000', borderRadius: '10px', border: '2px solid #fff', cursor: 'pointer', textAlign: 'center', fontSize: '13px', fontFamily:'Poppins, sans-serif'}}
               >
                 {option}
               </button>
