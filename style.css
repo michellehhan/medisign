@@ -9,6 +9,104 @@ html, body {
   background-color: white;
 }
 
+/* Default Light Mode */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.navbar-links a.light-mode {
+    color: black;
+}
+
+.profile-container.light-mode {
+    background-color: #fff;
+    color: black;
+}
+
+.footer.light-mode {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+/* Dark Mode */
+body.dark-mode,
+.container.dark-mode,
+.container2.dark-mode,
+.profile-container.dark-mode,
+.navbar-links.dark-mode,
+.footer.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: #121212;
+}
+
+.navbar-links a.dark-mode,
+.logo.dark-mode a.michelle {
+    color: white;
+}
+
+.profile-container.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.footer.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode, .high-contrast-mode {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
+
+.dark-mode .navbar-links, .high-contrast-mode .navbar-links {
+  background-color: #121212;
+}
+
+.dark-mode .container, 
+.dark-mode .container2, 
+.dark-mode .profile-container, 
+.dark-mode .footer,
+.dark-mode .navbar-links, 
+.dark-mode .logo a.michelle {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .navbar-links a, 
+.dark-mode .footer p, 
+.dark-mode .logo a.michelle,
+.high-contrast-mode .navbar-links a, 
+.high-contrast-mode .footer p, 
+.high-contrast-mode .logo a.michelle {
+  color: #ffffff;
+}
+
+/* High Contrast Mode */
+body.high-contrast-mode {
+    background-color: black;
+    color: #f4f4a9;
+}
+
+.navbar-links a.high-contrast-mode {
+    color: #f4f4a9;
+}
+
+.profile-container.high-contrast-mode {
+    background-color: black;
+    color: #f4f4a9;
+}
+
+.footer.high-contrast-mode {
+    background-color: black;
+    color: #f4f4a9;
+}
+
 
 /* LOADER */
 .loader-wrapper{

@@ -1,7 +1,65 @@
 $(window).on("load", function() {
   setTimeout(function(){
   $(".loader-wrapper").fadeOut(1400);
-  }, 1300);
+  }, 500);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const displayModeSelect = document.getElementById('display-mode');
+
+  displayModeSelect.addEventListener('change', function() {
+      const selectedMode = displayModeSelect.value;
+
+      if (selectedMode === 'light') {
+          applyLightMode();
+      } else if (selectedMode === 'dark') {
+          applyDarkMode();
+      } else if (selectedMode === 'high-contrast') {
+          applyHighContrastMode();
+      }
+  });
+
+  function applyLightMode() {
+      document.body.style.backgroundColor = 'white';
+      document.body.style.color = 'black';
+      applyStylesToElements('white', 'black');
+      applyNavStyles('white', 'black');
+  }
+
+  function applyDarkMode() {
+      document.body.style.backgroundColor = '#1e1e1e';
+      document.body.style.color = 'white';
+      applyStylesToElements('#1e1e1e', 'white');
+      applyNavStyles('#1e1e1e', 'white');
+  }
+
+  function applyHighContrastMode() {
+      document.body.style.backgroundColor = 'black';
+      document.body.style.color = '#f4f4a9';
+      applyStylesToElements('black', '#f4f4a9');
+      applyNavStyles('black', '#f4f4a9');
+  }
+
+  function applyStylesToElements(backgroundColor, color) {
+      const elementsToUpdate = document.querySelectorAll('*:not(button):not(.footer):not(.footer p)');
+      elementsToUpdate.forEach(element => {
+          element.style.backgroundColor = backgroundColor;
+          element.style.color = color;
+      });
+
+      const navLinks = document.querySelectorAll('.navbar-links a, .logo a.michelle');
+      navLinks.forEach(link => {
+          link.style.color = color;
+      });
+  }
+
+  function applyNavStyles(backgroundColor, color) {
+      const navElement = document.querySelector('nav');
+      navElement.style.backgroundColor = backgroundColor;
+      navElement.style.color = color;
+  }
+
+  applyLightMode();
 });
 
 document.getElementById('menu-btn').addEventListener('click', function() {
